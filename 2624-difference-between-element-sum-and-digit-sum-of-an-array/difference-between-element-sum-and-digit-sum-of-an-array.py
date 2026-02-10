@@ -4,14 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        ele=0
-        sd=0
+        ele=sd=0
         for i in nums:
             ele+=i
             while(i!=0):
-                d=i%10
-                sd+=d
-                i/=10
+                sd+=i%10
+                i//=10
         return abs(ele-sd)
 
         
