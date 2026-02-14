@@ -1,10 +1,8 @@
 class Solution(object):
     def numberGame(self, nums):
-        arr=[]
         nums.sort()
-        while(len(nums)>0):
-            a=nums.pop(0)
-            b=nums.pop(0)
-            arr.append(b)
-            arr.append(a)
+        arr = []
+        for i in range(0, len(nums), 2):
+            arr.append(nums[i+1])
+            arr.append(nums[i])
         return arr
